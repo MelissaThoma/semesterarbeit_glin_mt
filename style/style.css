@@ -1,0 +1,695 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif; 
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    line-height: 140%;
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+
+}
+
+.header-img {
+    width: 100%; 
+    height: auto;
+    position:relative;
+
+}
+
+.header-text {
+    position: absolute; /* Der Text wird absolut positioniert, basierend auf dem relativen Container */
+    top: 45vh; /* Positioniert den Text mittig auf dem Bild */
+    left: 25%; /* Horizontales Zentrieren */
+    text-align: left;
+    color: white; /* Weißer Text, um gut auf dem Bild sichtbar zu sein */
+    z-index: 10; /* Stellt sicher, dass der Text über dem Bild liegt */
+    font-size: 6em;
+    transform: translate(-50%, -50%); /* Verschiebt den Text, um ihn perfekt zu zentrieren */
+    font-weight: 400;
+    line-height: 110%;
+    margin: 0;
+}
+
+
+
+h1 {
+    font-size: 5em;
+    margin: 20vh 20vh 0vh 20vh;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: left;
+  
+}
+
+h2 {
+    font-size: 2.5em;
+    margin: 10vh 20vh 0vh 20vh;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: left;
+  
+}
+
+h3 {
+    font-size: 5em;
+    margin: 20vh 20vh 5vh 20vh;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: left;
+}
+
+h5 {
+    font-size: 2.5em;
+    line-height: 120%;
+    font-weight: 400;
+    text-align: left;
+    padding-bottom: 5vh;
+  
+}
+
+
+
+.einzug {
+    margin-left: 10vw;
+    margin-right: 10vw;
+margin-top: 5vh;
+    margin-bottom: 20vh;
+    font-size: 1.1rem;
+    line-height: 140%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 2vw;
+}
+
+.logo img {
+    width: 40px;
+}
+
+nav {
+    position: fixed;
+    top: 0;        
+    left: 0;        
+    width: 100%;    
+    z-index: 1000;  
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px 10px; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #80EBC9;
+    color: #000000;
+    transition: background-color 0.3s ease;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-right: 2vw;
+}
+
+nav ul li a:hover {
+    background-color: #AF9BE8;
+}
+
+nav ul li a.active {
+    background-color: #AF9BE8; 
+    color: rgb(0, 0, 0); 
+}
+
+main h1 {
+    font-size: 3.5em;
+    margin: auto;
+    max-width: 80%;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-top: 30vh; 
+    margin-bottom: 20vh;
+    text-align: center;
+
+}
+
+.highlight {
+    color: #AF9BE8; 
+    font-weight: 600;
+}
+
+.highlight-mint {
+    color: #80EBC9; 
+    font-weight: 600;
+}
+
+
+.black-line {
+    border: none;
+    height: 1.5px; 
+    background-color: #000; 
+    width: 100%; 
+}
+
+.black-line-section {
+    border: none;
+    height: 1.5px; 
+    background-color: #000; 
+    width: 100%; 
+    margin-top: 10vh;
+
+}
+
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px 0;
+
+}
+
+.colored-bullets li {
+    list-style-type: none; /* Entfernt die Standard-Bullets */
+    position: relative;
+    padding-left: 20px; /* Platz für das farbige Bullet */
+}
+
+.colored-bullets li::before {
+    content: "•"; 
+    color: #AF9BE8; 
+    font-size: 1.5em; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 1.2; 
+}
+
+
+/* Jedes Statistik-Element */
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 6em;
+    color: #5ee0b0;
+    font-weight: 600;
+    padding:10vh;
+
+}
+
+.stat-item p {
+    font-size: 1.4em; 
+    color: #000000; 
+    margin-bottom: 5vh;
+}
+
+
+/* Bilder mit Boxelementen */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+    margin-top: 10vh;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    color: white;
+    background-color: #AF9BE8;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    align-items: flex-end;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    line-height: 140%;
+}
+
+.grid-item:hover .hover-text {
+    opacity: 0.8;
+}
+
+.grid-item, .small-item, .large-item {
+    position: relative; /* Positionierung für die Hover-Texte */
+    overflow: hidden; /* Verhindert, dass der Text aus dem Container hinausläuft */
+}
+
+.grid-item img, .small-item img, .large-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hover-text {
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background-color: #AF9BE8;
+    color: white;
+    line-height: 140%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    box-sizing: border-box;
+    align-items: flex-end;
+    opacity: 0; /* Anfangszustand: unsichtbar */
+    transition: opacity 0.5s ease; /* Übergang für den Hover-Effekt */
+    z-index: 1; /* Stellt sicher, dass der Hover-Text über dem Bild liegt */
+}
+
+.grid-item:hover .hover-text,
+.small-item:hover .hover-text,
+.large-item:hover .hover-text {
+    opacity: 0.8; /* Sichtbar beim Hover */
+}
+
+
+/* Grid Aufbau Sushi-Rezepte Boxen */
+
+.gallery-section {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Erste Bildergalerie (4 Spalten) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    gap: 15px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.grid-item:nth-child(1) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.grid-item:nth-child(2),
+.grid-item:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.grid-item:nth-child(4),
+.grid-item:nth-child(5) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.grid-item:nth-child(6) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+
+/* Sushi-Grid*/
+
+.additional-sushi-recipes {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Zwei Spalten, eine für das große Bild, eine für die vier kleinen */
+    gap: 20px;
+    margin: 3vh 3vh 3vh 3vh;
+    max-width: 100%;
+}
+
+.large-item {
+    grid-column: span 1; /* Nimmt die linke Spalte ein */
+}
+
+.large-item img {
+    width: 100%;
+    height: auto;
+}
+
+.small-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Zwei Spalten für die vier kleinen Bilder */
+    gap: 15px;
+}
+
+.small-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.two-column-grid {
+    grid-column: span 2; /* Nimmt die volle Breite */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Zwei Spalten für die nachfolgenden Bilder */
+    gap: 15px;
+    margin-top: 0vh;
+}
+
+.two-column-grid .grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Zweite Bildergalerie (2 Spalten) */
+.gallery-grid-two-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Zwei Spalten für die folgenden Bilder */
+    gap: 20px;
+}
+
+.gallery-grid-two-columns .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0vw;
+    padding-left: 5vw;
+    padding-top: 5vw;
+
+}
+
+.left-column {
+    background-color: #ffffff;
+    padding-left: 5vw;
+    font-size: 1.2em;
+    line-height: 140%;
+}
+
+.left-column h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.left-column ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.left-column ul li {
+    margin-bottom: 0px;
+}
+
+.right-column {
+    background-color: #fff;
+    padding-right: 5vw;
+    font-size: 1.2em;
+    line-height: 140%;
+
+
+}
+
+.right-column p {
+    margin-bottom: 20px;
+
+}
+
+/* sushi section*/
+
+.sushi-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10vh;
+    padding: 2vw;
+    max-width: 100%;
+}
+
+.image-placeholder {
+    width: 45%; /* Bild nimmt 45% der Breite ein */
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-content {
+    width: 45%;
+}
+
+.text-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+    line-height: 140%;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.custom-button {
+    font-family: 'Raleway', sans-serif; 
+    background-color: transparent;
+    color: black; 
+    border: 2px solid #AF9BE8; 
+    border-radius: 50px;
+    width: 40%;
+    margin: 2vw 0vw 10vw 10vw;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    text-decoration: none;
+    text-align: center;
+}
+
+.custom-button-sushi {
+margin-left: 0;
+color: black; 
+
+border: 2px solid #AF9BE8; 
+border-radius: 50px;
+text-decoration: none;
+
+padding: 10px 20px; 
+
+}
+
+.custom-button:hover {
+    background-color: #AF9BE8; 
+    color: white; 
+}
+
+.custom-button-sushi:hover {
+    background-color: #AF9BE8; 
+    color: white; 
+}
+
+/* Aktiver Button */
+.custom-button.active {
+    background-color: #AF9BE8;
+    color: white;
+}
+
+
+/* Container für die Filter-Buttons */
+.button-container {
+    display: flex;
+    flex-wrap: wrap; /* Ermöglicht Umbruch auf nächste Zeile */
+    gap: 10px; /* Abstand zwischen den Buttons */
+    justify-content: left; /* Zentriert die Buttons */
+    margin: 10vh;
+    margin-left: 10vw;
+}
+
+.filter-button {
+    display: inline-block;
+    padding: 10px 50px;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #AF9BE8;
+    color: black;
+    border-radius: 50px; /* Runde Ecken */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover-Effekt */
+.filter-button:hover {
+    background-color: #AF9BE8;
+    color: white;
+}
+
+/* Aktiver Button */
+.filter-button.active {
+    background-color: #AF9BE8;
+    color: white;
+}
+
+
+
+footer {
+    background-color: #8EEAC4; 
+    padding: 5vh 0 2vh 2vh; 
+    padding-right: 3vw;
+    padding-left: 3vw;
+    
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto; 
+}
+
+.footer-icons img {
+    width: 40px; 
+    margin-right: 10px;
+}
+
+.footer-icons a {
+    display: inline-block;
+}
+
+.footer-copyright {
+    font-size: 1em;
+    color: #000000;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Layout für kleinere Geräte Boxen von Bildern */
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* zwei spaltiges Layout der Texte in ueber mich */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .left-column {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid-two-columns {
+        grid-template-columns: 1fr; /* Bei kleineren Bildschirmen einspaltig */
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 150px;
+    }
+
+    .gallery-grid-two-columns {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 150px;
+    }
+
+    .grid-item:nth-child(1) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 900px) {
+    .additional-sushi-recipes {
+        grid-template-columns: 1fr; /* Einspaltig für kleine Bildschirme */
+    }
+
+    .small-items {
+        grid-template-columns: repeat(2, 1fr); /* Behält zwei Spalten für die kleineren Bilder */
+    }
+
+    .two-column-grid {
+        grid-template-columns: 1fr; /* Einspaltig für zusätzliche Bilder */
+    }
+}
