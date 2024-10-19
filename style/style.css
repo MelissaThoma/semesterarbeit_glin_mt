@@ -56,7 +56,7 @@ header {
     margin-left: 10vw;
     margin-right: 10vw;
 margin-top: 5vh;
-    margin-bottom: 20vh;
+    margin-bottom: 15vh;
     font-size: 1.1rem;
     line-height: 140%;
 }
@@ -299,6 +299,7 @@ span.highlight-mint {
     bottom: 0;
     left: 0;
     padding: 10px;
+    font-size: 1.2em;
     background-color: #AF9BE8;
     color: white;
     line-height: 140%;
@@ -498,6 +499,7 @@ span.highlight-mint {
     width: 45%;
 }
 
+
 .text-content h1 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -627,6 +629,18 @@ footer {
 html {
     scroll-behavior: smooth;
 }
+
+.video-container {
+    position: relative;
+    height: auto;
+    margin: 2vw;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
 
 /* Responsive Layout */
 @media (max-width: 900px) {
